@@ -10,6 +10,9 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField] private float maxSpeed = 10.0f;
 
+    //% of speed lost when touching screen edges (must be <1 and >= 0)
+    [SerializeField] private float bounceSpeedLoss = 0.3f;
+    
     private float curSpeed = 0.0f;
 
     private Rigidbody2D rb;
@@ -37,6 +40,21 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        rb.MovePosition(transform.position + Vector3.up * curSpeed * Time.fixedDeltaTime);
+        var newPos = transform.position + Vector3.up * curSpeed * Time.fixedDeltaTime;
+
+        var maxHeight = Camera.main.ScreenToWorldPoint(Vector3.up * Screen.height).y;
+        var minHeight = Camera.main.ScreenToWorldPoint(Vector3.zero).y;
+        if (newPos.y > maxHeight)
+        {
+            newPos.y = maxHeight;
+            curSpeed *= bounceSpeedLoss - 1;
+        }
+        else if (newPos.y < minHeight)
+        {
+            newPos.y = minHeight;
+            curSpeed *= bounceSpeedLoss - 1;
+        }
+
+        rb.MovePosition(newPos);
     }
 }
