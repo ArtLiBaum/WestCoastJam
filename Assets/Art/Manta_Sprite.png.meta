@@ -120,11 +120,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 645
+        y: 651
         width: 433
         height: 217
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 1
+      pivot: {x: 0, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -144,8 +144,8 @@ TextureImporter:
         y: 651
         width: 433
         height: 217
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 1
+      pivot: {x: 0, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -165,8 +165,8 @@ TextureImporter:
         y: 651
         width: 433
         height: 217
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 1
+      pivot: {x: 0, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -186,8 +186,8 @@ TextureImporter:
         y: 651
         width: 433
         height: 217
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 1
+      pivot: {x: 0, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -203,12 +203,12 @@ TextureImporter:
       name: Manta_Sprite_4
       rect:
         serializedVersion: 2
-        x: 0
-        y: 434
+        x: 1732
+        y: 651
         width: 433
         height: 217
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 1
+      pivot: {x: 0, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -224,12 +224,12 @@ TextureImporter:
       name: Manta_Sprite_5
       rect:
         serializedVersion: 2
-        x: 433
+        x: 0
         y: 434
         width: 433
         height: 217
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 1
+      pivot: {x: 0, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -245,12 +245,12 @@ TextureImporter:
       name: Manta_Sprite_6
       rect:
         serializedVersion: 2
-        x: 866
+        x: 433
         y: 434
         width: 433
         height: 217
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 1
+      pivot: {x: 0, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -266,12 +266,12 @@ TextureImporter:
       name: Manta_Sprite_7
       rect:
         serializedVersion: 2
-        x: 1299
+        x: 866
         y: 434
         width: 433
         height: 217
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 1
+      pivot: {x: 0, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -287,12 +287,12 @@ TextureImporter:
       name: Manta_Sprite_8
       rect:
         serializedVersion: 2
-        x: 0
-        y: 217
+        x: 1299
+        y: 434
         width: 433
         height: 217
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 1
+      pivot: {x: 0, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -308,12 +308,12 @@ TextureImporter:
       name: Manta_Sprite_9
       rect:
         serializedVersion: 2
-        x: 433
-        y: 217
+        x: 1732
+        y: 434
         width: 433
         height: 217
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 1
+      pivot: {x: 0, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -329,12 +329,12 @@ TextureImporter:
       name: Manta_Sprite_10
       rect:
         serializedVersion: 2
-        x: 866
+        x: 0
         y: 217
         width: 433
         height: 217
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 1
+      pivot: {x: 0, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -350,12 +350,12 @@ TextureImporter:
       name: Manta_Sprite_11
       rect:
         serializedVersion: 2
-        x: 1299
+        x: 433
         y: 217
         width: 433
         height: 217
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 1
+      pivot: {x: 0, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -371,12 +371,12 @@ TextureImporter:
       name: Manta_Sprite_12
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
+        x: 866
+        y: 217
         width: 433
         height: 217
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 1
+      pivot: {x: 0, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -392,12 +392,12 @@ TextureImporter:
       name: Manta_Sprite_13
       rect:
         serializedVersion: 2
-        x: 433
-        y: 0
+        x: 1299
+        y: 217
         width: 433
         height: 217
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 1
+      pivot: {x: 0, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -413,12 +413,12 @@ TextureImporter:
       name: Manta_Sprite_14
       rect:
         serializedVersion: 2
-        x: 866
-        y: 0
+        x: 1732
+        y: 217
         width: 433
         height: 217
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 1
+      pivot: {x: 0, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -426,6 +426,48 @@ TextureImporter:
       bones: []
       spriteID: 9b678f522592dbf40a01ca3f95ab5f05
       internalID: -1379210314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Manta_Sprite_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 433
+        height: 217
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab281d3c1e44880418176a14d61b6e39
+      internalID: -657735789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Manta_Sprite_16
+      rect:
+        serializedVersion: 2
+        x: 433
+        y: 0
+        width: 433
+        height: 217
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba239cf8f54e72d4dbe1010235707874
+      internalID: 372442490
       vertices: []
       indices: 
       edges: []
@@ -443,6 +485,7 @@ TextureImporter:
     nameFileIdTable:
       Manta_Sprite_10: -1818655636
       Manta_Sprite_3: 524223733
+      Manta_Sprite_16: 372442490
       Manta_Sprite_1: 1702185118
       Manta_Sprite_7: -86340077
       Manta_Sprite_8: 862419502
@@ -450,6 +493,7 @@ TextureImporter:
       Manta_Sprite_4: 2093979717
       Manta_Sprite_13: -1429009460
       Manta_Sprite_9: -192981473
+      Manta_Sprite_15: -657735789
       Manta_Sprite_12: -171826361
       Manta_Sprite_14: -1379210314
       Manta_Sprite_5: 563127031
