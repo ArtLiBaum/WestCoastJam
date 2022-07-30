@@ -495,6 +495,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1245478488477046, guid: 95f2dc562a3af3b40b559bd1a680e4b7, type: 3}
+      propertyPath: easySets.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1245478488477046, guid: 95f2dc562a3af3b40b559bd1a680e4b7, type: 3}
+      propertyPath: easySets.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 1667eccf29d9c824b8332c7b7adc89dc, type: 2}
+    - target: {fileID: 1245478488477046, guid: 95f2dc562a3af3b40b559bd1a680e4b7, type: 3}
+      propertyPath: easySets.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: 1667eccf29d9c824b8332c7b7adc89dc, type: 2}
+    - target: {fileID: 1245478488477046, guid: 95f2dc562a3af3b40b559bd1a680e4b7, type: 3}
+      propertyPath: easySets.Array.data[2]
+      value: 
+      objectReference: {fileID: 11400000, guid: 693d9dbc91b787846b1e772590d9978c, type: 2}
     - target: {fileID: 1245478488477047, guid: 95f2dc562a3af3b40b559bd1a680e4b7, type: 3}
       propertyPath: m_Name
       value: PropGenerator

@@ -6,8 +6,9 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public static float LevelSpeed { get; set; } = -1f;
+    public static float LevelTime => -LevelSpeed * Time.deltaTime;
 
-    [SerializeField] private float LevelSpeedDecay = 0.1f;
+    [SerializeField] private float LevelSpeedDecay = 0.1f;       
     [SerializeField] private float CoasterSpeedGoal = -5;
     [SerializeField] private float CoasterTimeGoal = -5;
 

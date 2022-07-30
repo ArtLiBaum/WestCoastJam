@@ -44,6 +44,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 730afca0732797941939cbcd8d599cbc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  propSets:
-  - {fileID: 7003914191858742079, guid: 9e8f1a1da4199294fb4de29f3113791e, type: 3}
-  - {fileID: 2005420142841092361, guid: 61daee283f42b104eb7cdc3d5d7245cf, type: 3}
+  easySets:
+  - {fileID: 11400000, guid: 1667eccf29d9c824b8332c7b7adc89dc, type: 2}
+  - {fileID: 11400000, guid: 1667eccf29d9c824b8332c7b7adc89dc, type: 2}
+  - {fileID: 11400000, guid: 693d9dbc91b787846b1e772590d9978c, type: 2}
+  medSets: []
+  hardSets: []
