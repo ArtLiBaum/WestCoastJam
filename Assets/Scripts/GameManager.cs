@@ -26,13 +26,14 @@ public class GameManager : MonoBehaviour
          instance = this;
       }
    }
-
+      
     private void FixedUpdate()
     {
         print(LevelSpeed);
         LevelSpeed += LevelSpeedDecay * Time.deltaTime;
        if (LevelSpeed > 0)
        {
+            
            LevelSpeed = 0;
        }
     }
