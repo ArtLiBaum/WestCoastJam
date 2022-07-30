@@ -5,8 +5,7 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-   private static float levelSpeed = 1f;
-   public static float LevelSpeed => levelSpeed;
+   public static float LevelSpeed { get; set; } = 1.0f;
 
    private GameManager instance;
 
@@ -18,11 +17,5 @@ public class GameManager : MonoBehaviour
       {
          instance = this;
       }
-   }
-
-
-   public static void ChangeSpeed(float delta)
-   {
-      levelSpeed += delta;
    }
 }

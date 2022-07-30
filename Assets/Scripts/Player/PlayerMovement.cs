@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(Rigidbody))]
+[RequireComponent(typeof(Rigidbody2D))]
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] private float accelerationAmt = 5.0f;
@@ -12,11 +12,11 @@ public class PlayerMovement : MonoBehaviour
 
     private float curSpeed = 0.0f;
 
-    private Rigidbody rb;
+    private Rigidbody2D rb;
 
     private void Awake()
     {
-        rb = GetComponent<Rigidbody>();
+        rb = GetComponent<Rigidbody2D>();
     }
 
 
