@@ -13,7 +13,7 @@ public class PropGenerator : MonoBehaviour
 
     private RandomSetManager _easyRandomSetManager, _medRandomSetManager, _hardRandomSetManager;
     private RandomSetManager _currentSetManager;
-    [SerializeField] PropSet _currentSet;
+    private PropSet _currentSet;
 
     private bool _isRandom = true;
     
@@ -48,7 +48,7 @@ public class PropGenerator : MonoBehaviour
         RandomHard,
     }
 
-    private SpawnState _currentState;
+    [SerializeField] private SpawnState _currentState;
 
     private void Awake()
     {
