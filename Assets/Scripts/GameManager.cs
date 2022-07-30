@@ -10,6 +10,13 @@ public class GameManager : MonoBehaviour
    [SerializeField] private float LevelSpeedDecay = 0.1f;
    private GameManager instance;
 
+
+   private void Update()
+   {
+      //TODO Slow the player over time
+      
+   }
+
    private void Awake()
    {
       if(instance)
