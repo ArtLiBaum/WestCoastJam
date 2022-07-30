@@ -42,8 +42,9 @@ public class PlayerMovement : MonoBehaviour
     {
         var newPos = transform.position + Vector3.up * curSpeed * Time.fixedDeltaTime;
 
-        var maxHeight = Camera.main.ScreenToWorldPoint(Vector3.up * Screen.height).y;
-        var minHeight = Camera.main.ScreenToWorldPoint(Vector3.zero).y;
+        var maxHeight = CameraController.Main.Cam.ScreenToWorldPoint(Vector3.up * Screen.height).y;
+        var minHeight = CameraController.Main.Cam.ScreenToWorldPoint(Vector3.zero).y;
+        
         if (newPos.y > maxHeight)
         {
             newPos.y = maxHeight;
