@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 423514cf491d6bf468dab95895b75ed4
+guid: 3a93dd28998e1aa499d49ad38c7bd2ff
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -104,13 +104,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: BG_Tile_Sprite_01_0
+      name: BG_Stars_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 135
+        y: 202.5
         width: 240
-        height: 135
+        height: 202.5
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -118,20 +118,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 27e664b8329d9b548a886abb40d31ea9
-      internalID: 1966297437
+      spriteID: ae253a4e99ba3154dac84711c615bc37
+      internalID: 1106847110
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BG_Tile_Sprite_01_1
+      name: BG_Stars_1
       rect:
         serializedVersion: 2
         x: 240
-        y: 135
+        y: 202.5
         width: 240
-        height: 135
+        height: 202.5
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -139,20 +139,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ea27af032fa65694bb416b123d6248bf
-      internalID: -1334901008
+      spriteID: 91d04566d1c810848ab8238abfb25a36
+      internalID: -83129877
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BG_Tile_Sprite_01_2
+      name: BG_Stars_2
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
+        y: 0.5
         width: 240
-        height: 135
+        height: 202.5
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -160,20 +160,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8e7efaa6b282ff848aa5457145233cf6
-      internalID: -692005577
+      spriteID: b5f90c59c561ab84eae093cc4bdd0277
+      internalID: 328727937
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BG_Tile_Sprite_01_3
+      name: BG_Stars_3
       rect:
         serializedVersion: 2
         x: 240
-        y: 0
+        y: 0.5
         width: 240
-        height: 135
+        height: 202.5
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -181,8 +181,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c1ea20af42699a94dad733ec50f71a22
-      internalID: 16465348
+      spriteID: 48f655091fd7b584bbaccbf7367ae3e7
+      internalID: 1637061649
       vertices: []
       indices: 
       edges: []
@@ -190,18 +190,18 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: a67440e193c1d514095f21d0d89da39e
-    internalID: 0
+    spriteID: e5c178a133d8549459d213381c2e70c5
+    internalID: 2055408597
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      BG_Tile_Sprite_01_2: -692005577
-      BG_Tile_Sprite_01_0: 1966297437
-      BG_Tile_Sprite_01_1: -1334901008
-      BG_Tile_Sprite_01_3: 16465348
+      BG_Stars_3: 1637061649
+      BG_Stars_2: 328727937
+      BG_Stars_1: -83129877
+      BG_Stars_0: 1106847110
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
