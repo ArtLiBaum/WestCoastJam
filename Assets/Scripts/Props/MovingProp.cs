@@ -30,9 +30,21 @@ public class MovingProp : MonoBehaviour
         //apply movement
         _rigidbody.MovePosition(transform.position + Vector3.right*(baseMoveSpeed * GameManager.LevelSpeed * Time.fixedDeltaTime) );
     }
-
-    private void OnCollisionEnter2D(Collision2D col)
+    
+    
+    private void OnTriggerEnter2D(Collider2D col)
     {
         //When colliding with player destroy self
+        if (Multitag.CompareTag(col.gameObject,"Player"))
+        {
+            //
+            Debug.Log( name + " Hit Player");
+            OnHit();
+        }
+    }
+
+    protected virtual void OnHit()
+    {
+        
     }
 }

@@ -9,6 +9,13 @@ public class GameManager : MonoBehaviour
 
    private GameManager instance;
 
+
+   private void Update()
+   {
+      //TODO Slow the player over time
+      
+   }
+
    private void Awake()
    {
       if(instance)

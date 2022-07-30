@@ -49,6 +49,7 @@ public class PlayerMovement : MonoBehaviour
         {
             newPos.y = maxHeight;
             curSpeed *= bounceSpeedLoss - 1;
+
         }
         else if (newPos.y < minHeight)
         {
