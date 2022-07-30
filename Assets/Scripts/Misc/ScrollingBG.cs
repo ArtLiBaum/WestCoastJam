@@ -27,6 +27,7 @@ public class ScrollingBG : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
+        scrollSpeed = GameManager.LevelSpeed * 10;
         var moveAmt = scrollSpeed * Time.deltaTime;
         movedDist += Mathf.Abs(moveAmt);
         transform.position += Vector3.right * moveAmt;
