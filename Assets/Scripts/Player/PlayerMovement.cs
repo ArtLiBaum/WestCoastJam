@@ -17,6 +17,10 @@ public class PlayerMovement : MonoBehaviour
 
     private Rigidbody2D rb;
 
+    [SerializeField] private Animator anim;
+    
+    private static readonly int PlyVertVelocity = Animator.StringToHash("plyVertVelocity");
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -36,6 +40,8 @@ public class PlayerMovement : MonoBehaviour
         }
 
         curSpeed = Mathf.Clamp(curSpeed, -maxSpeed, maxSpeed);
+        
+        anim.SetFloat(PlyVertVelocity, curSpeed);
     }
 
     private void FixedUpdate()
