@@ -5,19 +5,24 @@ using UnityEngine;
 
 public class SeaWeedController : MonoBehaviour
 {
-    [SerializeField] private List<SeaweedPattern> seaWeedPatterns;
+    [SerializeField] private List<MovingSeaweed> seaWeedPatterns;
     [Range(-8,10)]
     [SerializeField] private float xTrigger;
 
-
+    private bool triggered = false;
+    
     private void Update()
     {
-        //Check to see if in postision
-        if (transform.position.x < xTrigger)
+        //Don't fire more than once
+        if (triggered) return;
+        
+        //Check to see if in position
+        if (transform.position.x <= xTrigger)
         {
+            triggered = true;
             foreach (var weed in seaWeedPatterns)
             {
-                weed.Play();
+                weed.Activate();
             }
         }
     }

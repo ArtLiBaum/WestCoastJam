@@ -10,7 +10,7 @@ public class MovingProp : MonoBehaviour
     [Range(1,10)]
     [SerializeField] private float baseMoveSpeed = 1f;
 
-    private Rigidbody2D _rigidbody;
+    protected Rigidbody2D _rigidbody;
 
     private void Awake()
     {
@@ -30,10 +30,11 @@ public class MovingProp : MonoBehaviour
 
     }
 
-    private void FixedUpdate()
+    protected virtual void FixedUpdate()
     {
         //apply movement
-        _rigidbody.MovePosition(transform.position + Vector3.right*(baseMoveSpeed * GameManager.LevelSpeed * Time.fixedDeltaTime) );
+        _rigidbody.MovePosition(transform.position + 
+                                Vector3.right*(baseMoveSpeed * GameManager.LevelSpeed * Time.fixedDeltaTime) );
     }
 
 

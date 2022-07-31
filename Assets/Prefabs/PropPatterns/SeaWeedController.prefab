@@ -46,8 +46,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a863a6a3d4546654087fdf5dcfc70385, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  seaWeedAnimators: []
-  xTrigger: 7
+  seaWeedPatterns:
+  - {fileID: 0}
+  xTrigger: 6.22
 --- !u!50 &1269107493827508384
 Rigidbody2D:
   serializedVersion: 4
