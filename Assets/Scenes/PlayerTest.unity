@@ -178,18 +178,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 854953456907863853, guid: 964db5f919898564a8216bf25d21d40b, type: 3}
-      propertyPath: dragModifier
-      value: 0.02
-      objectReference: {fileID: 0}
-    - target: {fileID: 854953456907863853, guid: 964db5f919898564a8216bf25d21d40b, type: 3}
-      propertyPath: CoasterTimeGoal
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 854953456907863853, guid: 964db5f919898564a8216bf25d21d40b, type: 3}
-      propertyPath: CoasterSpeedGoal
-      value: -4
-      objectReference: {fileID: 0}
     - target: {fileID: 3047866653093522298, guid: 964db5f919898564a8216bf25d21d40b, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -199.72998

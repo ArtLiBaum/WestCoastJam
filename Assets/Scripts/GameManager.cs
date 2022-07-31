@@ -57,9 +57,17 @@ public class GameManager : MonoBehaviour
     private void FixedUpdate()
     {
         print("" + LevelSpeed + "   " + CoasterTimeFraction);
-        //drag rises exponentially with the speed
-        float drag = LevelSpeed * LevelSpeed * dragModifier * Time.deltaTime;
-        LevelSpeed += drag;
+        if (LevelSpeed < -1)
+        {
+            //drag rises exponentially with the speed
+            float drag = Mathf.Abs(LevelSpeed) * dragModifier * Time.fixedDeltaTime;
+            LevelSpeed += drag;
+        }
+        else
+        {
+            
+        }
+
         //print(drag);
         if (LevelSpeed > -0.01)
         {
