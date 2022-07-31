@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
     public static float LevelTime => -LevelSpeed * Time.deltaTime;
     public static int TotalPoints;
     public static int TotalHits;
+    public static bool isPlaying = true;
 
 
     public static float CoasterTimeFraction = 0;
@@ -56,6 +57,7 @@ public class GameManager : MonoBehaviour
         CoasterTimeGoal = (int)LevelBenchmarks.EasyLevel;
         TotalHits = 0;
         TotalPoints = 0;
+        isPlaying = true;
     }
 
     private void FixedUpdate()
@@ -78,7 +80,7 @@ public class GameManager : MonoBehaviour
             //Game Over
             LevelSpeed = 0;
             gameOverScreen.SetActive(true);
-
+            isPlaying = false;
         }
 
         if ((LevelSpeed <= CoasterSpeedGoal))
@@ -109,6 +111,8 @@ public class GameManager : MonoBehaviour
                     //if win then activate winScreen
                     if (TotalHits <= 30)
                         ++TotalPoints;
+                    CoasterTimer = 0;
+                    isPlaying = false;
                     winScreen.SetActive(true);
                     break;
                 default:
@@ -121,6 +125,7 @@ public class GameManager : MonoBehaviour
     public void RestartLevel()
     {
         LevelSpeed = -1f;
+        _propGenerator.SetState(PropGenerator.SpawnState.RandomEasy);
         gameOverScreen.SetActive(false);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }

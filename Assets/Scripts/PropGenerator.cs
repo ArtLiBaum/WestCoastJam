@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEditor.SceneManagement;
 using UnityEngine;
 
@@ -60,6 +61,9 @@ public class PropGenerator : MonoBehaviour
 
     private void Update()
     {
+        //dont update if game is stopped
+        if (!GameManager.isPlaying) return;
+        
         _globalTime += GameManager.LevelTime;
 
 
