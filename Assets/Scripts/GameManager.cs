@@ -8,17 +8,19 @@ public class GameManager : MonoBehaviour
 {
     public static float LevelSpeed { get; set; } = -3f;
     public static float LevelTime => -LevelSpeed * Time.deltaTime;
+    public static float CoasterTimeFraction = 0;
 
-    [SerializeField] [Range(-5,-1)] private float startSpeed = -3f;
-    [SerializeField] private float dragModifier = 0.1f;       
-    [SerializeField] private float CoasterSpeedGoal = -5;
-    [SerializeField] private float CoasterTimeGoal = -5;
+    [SerializeField] [Range(-5, -1)] private float startSpeed = -3f;
+    [SerializeField] private float dragModifier = 0.1f;
+    [SerializeField] private float CoasterSpeedGoal = -4.5f;
+    [SerializeField] private float CoasterTimeGoal = 5;
 
     private float CoasterTimer = 0;
 
     private PropGenerator _propGenerator;
 
-    [Header("UI Hookups")] 
+
+    [Header("UI Hookups")]
     [SerializeField] private GameObject gameOverScreen;
     [SerializeField] private GameObject winScreen;
 
@@ -30,6 +32,8 @@ public class GameManager : MonoBehaviour
         MedLevel = 15,
         HardLevel = 20,
     }
+
+
 
     private void Awake()
     {
@@ -45,11 +49,14 @@ public class GameManager : MonoBehaviour
     {
         _propGenerator = FindObjectOfType<PropGenerator>();
         LevelSpeed = startSpeed;
+        CoasterTimer = 0;
+
+        CoasterTimeGoal = (int)LevelBenchmarks.EasyLevel;
     }
 
     private void FixedUpdate()
     {
-        //print(LevelSpeed);
+        print("" + LevelSpeed + "   " + CoasterTimeFraction);
         //drag rises exponentially with the speed
         float drag = LevelSpeed * LevelSpeed * dragModifier * Time.deltaTime;
         LevelSpeed += drag;
@@ -59,41 +66,43 @@ public class GameManager : MonoBehaviour
             //Game Over
             LevelSpeed = 0;
             gameOverScreen.SetActive(true);
-            
+
         }
 
-        if (!(LevelSpeed <= CoasterSpeedGoal)) return;
-        CoasterTimer += Time.deltaTime;
-
-        switch (_propGenerator.CurrentState)
+        if ((LevelSpeed <= CoasterSpeedGoal))
         {
-            case PropGenerator.SpawnState.RandomEasy:
-                if (CoasterTimer >= (int)LevelBenchmarks.EasyLevel)
-                {
+            CoasterTimer += Time.deltaTime;
+            CoasterTimeFraction = CoasterTimer / CoasterTimeGoal;
+        }
+
+        if (CoasterTimeFraction >= 1)
+        {
+            switch (_propGenerator.CurrentState)
+            {
+                case PropGenerator.SpawnState.RandomEasy:
+
                     _propGenerator.SetState(PropGenerator.SpawnState.RandomMed);
                     CoasterTimer = 0;
-                }
+                    CoasterTimeGoal = (int)LevelBenchmarks.MedLevel;
+                    break;
+                case PropGenerator.SpawnState.RandomMed:
 
-                break;
-            case PropGenerator.SpawnState.RandomMed:
-                if (CoasterTimer >= (int)LevelBenchmarks.MedLevel)
-                {
-                    _propGenerator.SetState(PropGenerator.SpawnState.RandomMed);
+                    _propGenerator.SetState(PropGenerator.SpawnState.RandomHard);
                     CoasterTimer = 0;
-                }
+                    CoasterTimeGoal = (int)LevelBenchmarks.HardLevel;
 
-                break;
-            case PropGenerator.SpawnState.RandomHard:
-                if (CoasterTimer >= (int)LevelBenchmarks.HardLevel)
-                {
+                    break;
+                case PropGenerator.SpawnState.RandomHard:
                     //if win then activate winScreen
                     winScreen.SetActive(true);
-                }
-                    
-                break;
-            default:
-                break;
+
+
+                    break;
+                default:
+                    break;
+            }
         }
+
     }
 
     public void RestartLevel()
@@ -102,6 +111,6 @@ public class GameManager : MonoBehaviour
         gameOverScreen.SetActive(false);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
-    
-    
+
+
 }

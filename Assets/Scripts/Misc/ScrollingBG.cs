@@ -5,7 +5,7 @@ using UnityEngine;
 [RequireComponent(typeof(SpriteRenderer))]
 public class ScrollingBG : MonoBehaviour
 {
-     private float scrollSpeed = -10.0f;
+    private float scrollSpeed = -10.0f;
     
     [Tooltip("The width of this object. Set to 0 to auto-calculate.")]
     [SerializeField] private float bgWidth = 0.0f;
@@ -27,6 +27,7 @@ public class ScrollingBG : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
+        
         scrollSpeed = GameManager.LevelSpeed * modifier;
         var moveAmt = scrollSpeed * Time.deltaTime;
         movedDist += Mathf.Abs(moveAmt);
