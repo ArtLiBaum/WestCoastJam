@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1ed2fa64fe8a6c46b5d3fca62a3ba01, type: 3}
+  m_Name: Hard Space Junk 1
+  m_EditorClassIdentifier: 
+  Prefab: {fileID: 6689009288599605449, guid: 11a326166ca56af45b2ae4718f96e336, type: 3}
+  SpawnDelay: 3
+  Weight: 26
