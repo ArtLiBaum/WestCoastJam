@@ -12,7 +12,7 @@ GameObject:
   m_Layer: 0
   m_Name: Easy coin 1
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -54,11 +54,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1125968015205334447, guid: 3d5e87678c702fd44978d0a343c6769b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1
+      value: 0.95
       objectReference: {fileID: 0}
     - target: {fileID: 1125968015205334447, guid: 3d5e87678c702fd44978d0a343c6769b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.22
+      value: 1.46
       objectReference: {fileID: 0}
     - target: {fileID: 1125968015205334447, guid: 3d5e87678c702fd44978d0a343c6769b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -116,11 +116,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1125968015205334447, guid: 3d5e87678c702fd44978d0a343c6769b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3
+      value: 2.95
       objectReference: {fileID: 0}
     - target: {fileID: 1125968015205334447, guid: 3d5e87678c702fd44978d0a343c6769b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.22
+      value: 1.46
       objectReference: {fileID: 0}
     - target: {fileID: 1125968015205334447, guid: 3d5e87678c702fd44978d0a343c6769b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -178,11 +178,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1125968015205334447, guid: 3d5e87678c702fd44978d0a343c6769b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2
+      value: 1.95
       objectReference: {fileID: 0}
     - target: {fileID: 1125968015205334447, guid: 3d5e87678c702fd44978d0a343c6769b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.22
+      value: 1.46
       objectReference: {fileID: 0}
     - target: {fileID: 1125968015205334447, guid: 3d5e87678c702fd44978d0a343c6769b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -240,11 +240,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1125968015205334447, guid: 3d5e87678c702fd44978d0a343c6769b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1
+      value: -1.05
       objectReference: {fileID: 0}
     - target: {fileID: 1125968015205334447, guid: 3d5e87678c702fd44978d0a343c6769b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.04
+      value: -0.71999997
       objectReference: {fileID: 0}
     - target: {fileID: 1125968015205334447, guid: 3d5e87678c702fd44978d0a343c6769b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -302,11 +302,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1125968015205334447, guid: 3d5e87678c702fd44978d0a343c6769b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2
+      value: -2.05
       objectReference: {fileID: 0}
     - target: {fileID: 1125968015205334447, guid: 3d5e87678c702fd44978d0a343c6769b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.01
+      value: -0.75
       objectReference: {fileID: 0}
     - target: {fileID: 1125968015205334447, guid: 3d5e87678c702fd44978d0a343c6769b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -364,11 +364,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1125968015205334447, guid: 3d5e87678c702fd44978d0a343c6769b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3
+      value: -3.05
       objectReference: {fileID: 0}
     - target: {fileID: 1125968015205334447, guid: 3d5e87678c702fd44978d0a343c6769b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.76
       objectReference: {fileID: 0}
     - target: {fileID: 1125968015205334447, guid: 3d5e87678c702fd44978d0a343c6769b, type: 3}
       propertyPath: m_LocalPosition.z
