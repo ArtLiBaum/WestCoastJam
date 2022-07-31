@@ -178,18 +178,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3047866653093522298, guid: 964db5f919898564a8216bf25d21d40b, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -199.72998
-      objectReference: {fileID: 0}
-    - target: {fileID: 3320157363101586817, guid: 964db5f919898564a8216bf25d21d40b, type: 3}
-      propertyPath: m_SortingOrder
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 9122779978704545803, guid: 964db5f919898564a8216bf25d21d40b, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -199.72998
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 964db5f919898564a8216bf25d21d40b, type: 3}
 --- !u!1 &376013570
@@ -358,7 +346,7 @@ Animator:
   m_GameObject: {fileID: 747175006}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 50289ee8e3b82874888d82d0a559c8f1, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

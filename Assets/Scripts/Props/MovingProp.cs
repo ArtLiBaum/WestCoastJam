@@ -24,7 +24,7 @@ public class MovingProp : MonoBehaviour
         if (transform.position.x < -10)
         {
             if(transform.parent)
-                Destroy(transform.parent.gameObject);
+                Destroy(transform.parent.gameObject, 30f);
             Destroy(gameObject);
         }
 
