@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4144805225740026605}
   - component: {fileID: 3438839843410835583}
   - component: {fileID: 360374271}
+  - component: {fileID: 1101449440097036671}
   m_Layer: 0
   m_Name: CrawlingSeeweed
   m_TagString: Untagged
@@ -113,6 +114,26 @@ MonoBehaviour:
   penalty: 0.2
   screenShakeDur: 0.2
   screenShakeIntensity: 0.2
+--- !u!95 &1101449440097036671
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4144805225740026600}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &4144805227646615039
 GameObject:
   m_ObjectHideFlags: 0
@@ -208,7 +229,7 @@ Animator:
   m_GameObject: {fileID: 4144805227646615039}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b9f5326d0dda4c94291a3bbe12ac72ee, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
