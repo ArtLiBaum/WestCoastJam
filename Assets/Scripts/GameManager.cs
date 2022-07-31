@@ -65,7 +65,7 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            
+            LevelSpeed += Time.fixedDeltaTime * dragModifier;
         }
 
         //print(drag);

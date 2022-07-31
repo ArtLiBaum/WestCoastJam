@@ -451,7 +451,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startSpeed: -3
-  dragModifier: 0.04
+  dragModifier: 0.1
   CoasterSpeedGoal: -4
   CoasterTimeGoal: 5
   gameOverScreen: {fileID: 8207407907052590515}
