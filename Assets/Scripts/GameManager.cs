@@ -27,7 +27,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject gameOverScreen;
     [SerializeField] private GameObject winScreen;
 
-    private GameManager instance;
+    private static GameManager instance;
 
     enum LevelBenchmarks
     {
@@ -56,6 +56,23 @@ public class GameManager : MonoBehaviour
         CoasterTimeGoal = (int)LevelBenchmarks.EasyLevel;
         TotalHits = 0;
         TotalPoints = 0;
+    }
+
+    public static void AdjustSpeed(float amount, float time)
+    {
+        instance.StartCoroutine(SpeedAdjust(amount, time));
+    }
+    
+    private static IEnumerator SpeedAdjust(float amount, float time)
+    {
+        var modLeft = amount;
+        while (modLeft > 0)
+        {
+            var dt = Time.deltaTime / time * amount;
+            LevelSpeed -= Mathf.Min(dt, modLeft);
+            modLeft -= dt;
+            yield return null;
+        }
     }
 
     private void FixedUpdate()
