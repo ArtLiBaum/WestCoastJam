@@ -7,6 +7,7 @@ public class MovingSpeedBoost : MovingProp
     [SerializeField] private float boostStrength;
     protected override void OnHit()
     {
+        ++GameManager.TotalPoints;
         GameManager.LevelSpeed -= boostStrength;
         Destroy(gameObject);
     }

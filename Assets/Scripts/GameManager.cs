@@ -8,12 +8,15 @@ public class GameManager : MonoBehaviour
 {
     public static float LevelSpeed { get; set; } = -3f;
     public static float LevelTime => -LevelSpeed * Time.deltaTime;
-    public static float CoasterTimeFraction = 0;
+    public static int TotalPoints;
+    public static int TotalHits;
 
-    [SerializeField] [Range(-5, -1)] private float startSpeed = -3f;
-    [SerializeField] private float dragModifier = 0.1f;
-    [SerializeField] private float CoasterSpeedGoal = -4.5f;
-    [SerializeField] private float CoasterTimeGoal = 5;
+
+    public static float CoasterTimeFraction = 0;
+    [SerializeField] [Range(-5,-1)] private float startSpeed = -3f;
+    [SerializeField] private float dragModifier = 0.1f;       
+    [SerializeField] private float CoasterSpeedGoal = -5;
+    [SerializeField] private float CoasterTimeGoal = -5;
 
     private float CoasterTimer = 0;
 
@@ -50,8 +53,9 @@ public class GameManager : MonoBehaviour
         _propGenerator = FindObjectOfType<PropGenerator>();
         LevelSpeed = startSpeed;
         CoasterTimer = 0;
-
         CoasterTimeGoal = (int)LevelBenchmarks.EasyLevel;
+        TotalHits = 0;
+        TotalPoints = 0;
     }
 
     private void FixedUpdate()
@@ -88,23 +92,24 @@ public class GameManager : MonoBehaviour
             switch (_propGenerator.CurrentState)
             {
                 case PropGenerator.SpawnState.RandomEasy:
-
                     _propGenerator.SetState(PropGenerator.SpawnState.RandomMed);
+                    if (TotalHits <= 10)
+                        ++TotalPoints;
                     CoasterTimer = 0;
                     CoasterTimeGoal = (int)LevelBenchmarks.MedLevel;
                     break;
                 case PropGenerator.SpawnState.RandomMed:
-
-                    _propGenerator.SetState(PropGenerator.SpawnState.RandomHard);
+                _propGenerator.SetState(PropGenerator.SpawnState.RandomHard);
+                   if (TotalHits <= 20)
+                        ++TotalPoints;
                     CoasterTimer = 0;
                     CoasterTimeGoal = (int)LevelBenchmarks.HardLevel;
-
                     break;
                 case PropGenerator.SpawnState.RandomHard:
                     //if win then activate winScreen
+                    if (TotalHits <= 30)
+                        ++TotalPoints;
                     winScreen.SetActive(true);
-
-
                     break;
                 default:
                     break;

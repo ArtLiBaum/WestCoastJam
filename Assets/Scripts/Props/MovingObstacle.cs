@@ -10,6 +10,7 @@ public class MovingObstacle : MovingProp
     
     protected override void OnHit()
     {
+        ++GameManager.TotalHits;
         GameManager.LevelSpeed += penalty;
         CameraController.Main.Shake(screenShakeIntensity, screenShakeDur);
         Destroy(gameObject);

@@ -81,11 +81,11 @@ public class PropGenerator : MonoBehaviour
                 break;
             case SpawnState.RandomMed:
                 _isRandom = true;
-                _currentSetManager = _easyRandomSetManager;
+                _currentSetManager = _medRandomSetManager;
                 break;
             case SpawnState.RandomHard:
                 _isRandom = true;
-                _currentSetManager = _easyRandomSetManager;
+                _currentSetManager = _hardRandomSetManager;
                 break;
             default:
                 break;
