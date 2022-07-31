@@ -79,7 +79,7 @@ public class GameManager : MonoBehaviour
 
         if ((LevelSpeed <= CoasterSpeedGoal))
         {
-            CoasterTimer += Time.deltaTime;
+            CoasterTimer += Time.fixedDeltaTime;
             CoasterTimeFraction = CoasterTimer / CoasterTimeGoal;
         }
 
