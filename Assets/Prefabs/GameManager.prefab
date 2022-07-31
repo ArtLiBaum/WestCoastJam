@@ -455,7 +455,7 @@ MonoBehaviour:
   CoasterSpeedGoal: -5
   CoasterTimeGoal: -5
   gameOverScreen: {fileID: 8207407907052590515}
-  winScreen: {fileID: 0}
+  winScreen: {fileID: 8959438858377183592}
 --- !u!1 &861454471797298971
 GameObject:
   m_ObjectHideFlags: 0
