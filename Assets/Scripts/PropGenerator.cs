@@ -11,11 +11,15 @@ public class PropGenerator : MonoBehaviour
     private float _globalTime;
     private float _spawnTime;
 
+    [SerializeField] private SpawnState _currentState;
+    
     private RandomSetManager _easyRandomSetManager, _medRandomSetManager, _hardRandomSetManager;
     private RandomSetManager _currentSetManager;
     private PropSet _currentSet;
 
     private bool _isRandom = true;
+    
+    
     
     private void Start()
     {
@@ -47,8 +51,6 @@ public class PropGenerator : MonoBehaviour
         RandomMed,
         RandomHard,
     }
-
-    [SerializeField] private SpawnState _currentState;
 
     private void Awake()
     {
@@ -91,7 +93,7 @@ public class PropGenerator : MonoBehaviour
 
    private void SpawnRandom()
    {
-       //Spawn a random prop prefab ever 3 seconds
+       //Spawn a random prop prefab 
        if (!(Math.Abs(_globalTime - _spawnTime) < 0.1f)) return;
        
        _currentSet = _currentSetManager.SelectSet();
