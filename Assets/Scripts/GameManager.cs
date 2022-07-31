@@ -14,11 +14,14 @@ public class GameManager : MonoBehaviour
 
 
     public static float CoasterTimeFraction = 0;
-    [SerializeField] [Range(-5,-1)] private float startSpeed = -3f;
-    [SerializeField] private float dragModifier = 0.1f;       
-    [SerializeField] private float CoasterSpeedGoal = -5;
-    [SerializeField] private float CoasterTimeGoal = -5;
 
+    public static bool IsAscending = false;
+    [SerializeField] [Range(-5, -1)] private float startSpeed = -3f;
+    [SerializeField] private float dragModifier = 0.1f;
+    [SerializeField] private float CoasterSpeedGoal = -4.5f;
+    [SerializeField] private float CoasterTimeGoal = 5;
+    [SerializeField] private float AscensionTimeGoal = 10;
+    private float AscensionTimer = -1;
     private float CoasterTimer = 0;
 
     private PropGenerator _propGenerator;
@@ -28,7 +31,11 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject gameOverScreen;
     [SerializeField] private GameObject winScreen;
 
+    [SerializeField] private ScrollingBG stars;
+    [Header("Other Objects")]
     private static GameManager instance;
+
+
 
     enum LevelBenchmarks
     {
@@ -79,6 +86,7 @@ public class GameManager : MonoBehaviour
 
     private void FixedUpdate()
     {
+        stars.SetAlpha(CoasterTimeFraction);
         print("" + LevelSpeed + "   " + CoasterTimeFraction);
         if (LevelSpeed < -1)
         {
@@ -108,6 +116,18 @@ public class GameManager : MonoBehaviour
 
         if (CoasterTimeFraction >= 1)
         {
+            IsAscending = true;
+            // foreach(var obj in Multitag.FindGameObjectsWithTag("Prop"))
+            // {
+            //     obj.SetActive(false);
+            // }
+            //
+
+            for (int i = 0; i < _propGenerator.transform.childCount; i++)
+            {
+                Destroy(_propGenerator.transform.GetChild(i).gameObject);
+            }
+            _propGenerator.gameObject.SetActive(false);
             switch (_propGenerator.CurrentState)
             {
                 case PropGenerator.SpawnState.RandomEasy:
@@ -116,6 +136,7 @@ public class GameManager : MonoBehaviour
                         ++TotalPoints;
                     CoasterTimer = 0;
                     CoasterTimeGoal = (int)LevelBenchmarks.MedLevel;
+
                     break;
                 case PropGenerator.SpawnState.RandomMed:
                 _propGenerator.SetState(PropGenerator.SpawnState.RandomHard);
@@ -134,6 +155,21 @@ public class GameManager : MonoBehaviour
                     break;
                 default:
                     break;
+            }
+        }
+        print("" + AscensionTimer + " | " + IsAscending);
+        if (IsAscending)
+        {
+
+            stars.SetAlpha(1);
+            CoasterTimer = 0;
+            AscensionTimer += Time.fixedDeltaTime;
+            if (AscensionTimer >= AscensionTimeGoal)
+            {
+                stars.FadeOut();
+                AscensionTimer = 0;
+                IsAscending = false;
+                _propGenerator.gameObject.SetActive(true);
             }
         }
 
