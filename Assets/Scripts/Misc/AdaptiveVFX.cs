@@ -9,6 +9,7 @@ public class AdaptiveVFX : MonoBehaviour
     private ColorGrading colorEffect;
     private Bloom bloom;
     private Vignette vignette;
+    private ChromaticAberration aberration;
     
     [SerializeField] private Vector2 saturationScalingPoints = new Vector2(0, 2);
 
@@ -22,12 +23,17 @@ public class AdaptiveVFX : MonoBehaviour
 
     [SerializeField] private Vector2 vignetteIntensityMinMax = new Vector2(0.5f, 0);
 
+    [SerializeField] private Vector2 aberrationScalingPoints = new Vector2(3, 6);
+    
+    [SerializeField] private Vector2 aberrationIntensityMinMax = new Vector2(0, 0.4f);
+
     private void Awake()
     {
         var volume = GetComponent<PostProcessVolume>();
         bloom = volume.profile.GetSetting<Bloom>();
         colorEffect = volume.profile.GetSetting<ColorGrading>();
         vignette = volume.profile.GetSetting<Vignette>();
+        aberration = volume.profile.GetSetting<ChromaticAberration>();
     }
 
     private static float GetTFromLevelSpeed(Vector2 scalePoints)
@@ -40,5 +46,6 @@ public class AdaptiveVFX : MonoBehaviour
         bloom.intensity.Interp(bloomIntensityMinMax.x, bloomIntensityMinMax.y, GetTFromLevelSpeed(bloomIntensityScalingPoints));
         colorEffect.saturation.Interp(saturationMinMax.x, saturationMinMax.y, GetTFromLevelSpeed(saturationScalingPoints));
         vignette.intensity.Interp(vignetteIntensityMinMax.x, vignetteIntensityMinMax.y, GetTFromLevelSpeed(vignetteScalingPoints));
+        aberration.intensity.Interp(aberrationIntensityMinMax.x, aberrationIntensityMinMax.y, GetTFromLevelSpeed(aberrationScalingPoints));
     }
 }
