@@ -9,7 +9,7 @@ public class GameManager : MonoBehaviour
     public static float LevelSpeed { get; set; } = -1f;
     public static float LevelTime => -LevelSpeed * Time.deltaTime;
 
-    [SerializeField] private float LevelSpeedDecay = 0.1f;       
+    [SerializeField] private float dragModifier = 0.1f;       
     [SerializeField] private float CoasterSpeedGoal = -5;
     [SerializeField] private float CoasterTimeGoal = -5;
 
@@ -41,7 +41,10 @@ public class GameManager : MonoBehaviour
     private void FixedUpdate()
     {
         //print(LevelSpeed);
-        LevelSpeed += LevelSpeedDecay * Time.deltaTime;
+        //drag rises exponentially with the speed
+        float drag = LevelSpeed * LevelSpeed * dragModifier * Time.deltaTime;
+        LevelSpeed += drag;
+        print(drag);
         if (LevelSpeed > -0.01)
         {
             //Game Over
