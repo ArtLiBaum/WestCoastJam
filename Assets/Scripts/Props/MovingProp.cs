@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
@@ -20,9 +21,13 @@ public class MovingProp : MonoBehaviour
     void Update()
     {
         //off screen check
-        if(transform.position.x < -10)
+        if (transform.position.x < -10)
+        {
+            if(transform.parent)
+                Destroy(transform.parent.gameObject);
             Destroy(gameObject);
-        
+        }
+
     }
 
     private void FixedUpdate()
@@ -30,15 +35,15 @@ public class MovingProp : MonoBehaviour
         //apply movement
         _rigidbody.MovePosition(transform.position + Vector3.right*(baseMoveSpeed * GameManager.LevelSpeed * Time.fixedDeltaTime) );
     }
-    
-    
+
+
     private void OnTriggerEnter2D(Collider2D col)
     {
         //When colliding with player destroy self
-        if (Multitag.CompareTag(col.gameObject,"Player"))
+        if (Multitag.CompareTag(col.gameObject, "Player"))
         {
             //
-            Debug.Log( name + " Hit Player");
+            Debug.Log(name + " Hit Player");
             OnHit();
         }
     }
