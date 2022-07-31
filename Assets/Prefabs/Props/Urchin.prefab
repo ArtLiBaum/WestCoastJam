@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3438839843410835583}
   - component: {fileID: 360374271}
   m_Layer: 0
-  m_Name: Obstacle
+  m_Name: Urchin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -137,7 +137,7 @@ Transform:
   m_GameObject: {fileID: 4144805227646615039}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 4, y: 4, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4144805225740026606}
@@ -184,8 +184,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Color: {r: 1, g: 0.02352941, b: 0.054429647, a: 1}
+  m_Sprite: {fileID: 1572314432, guid: 773a09925ef95304e9b1a036e7345460, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
