@@ -8,7 +8,6 @@ public class BoostVariation : MonoBehaviour
 {
     [SerializeField] private SpriteRenderer _renderer;
     [SerializeField] private SpriteMask _mask;
-
     private Vector3 spin;
     private void Start()
     {
