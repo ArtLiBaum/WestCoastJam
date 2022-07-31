@@ -86,6 +86,10 @@ public class GameManager : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            FlashOfLight.FlashLight();
+        }
         stars.SetAlpha(CoasterTimeFraction);
         print("" + LevelSpeed + "   " + CoasterTimeFraction);
         if (LevelSpeed < -1)
@@ -117,6 +121,7 @@ public class GameManager : MonoBehaviour
         if (CoasterTimeFraction >= 1)
         {
             IsAscending = true;
+            FlashOfLight.FlashLight();
             // foreach(var obj in Multitag.FindGameObjectsWithTag("Prop"))
             // {
             //     obj.SetActive(false);
@@ -169,6 +174,7 @@ public class GameManager : MonoBehaviour
                 stars.FadeOut();
                 AscensionTimer = 0;
                 IsAscending = false;
+                FlashOfLight.FlashLight();
                 _propGenerator.gameObject.SetActive(true);
             }
         }
