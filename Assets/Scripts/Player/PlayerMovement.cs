@@ -29,6 +29,9 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
+        //Don't update if game is stopped
+        if (!GameManager.isPlaying) return;
+        
         if (Input.GetKey(KeyCode.W))
         {
             curSpeed += accelerationAmt * Time.deltaTime;
@@ -46,6 +49,9 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
+        //Don't update if game is stopped
+        if (!GameManager.isPlaying) return;
+        
         var newPos = transform.position + Vector3.up * curSpeed * Time.fixedDeltaTime;
 
         var maxHeight = CameraController.Main.Cam.ScreenToWorldPoint(Vector3.up * Screen.height).y;

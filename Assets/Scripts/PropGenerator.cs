@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEditor.SceneManagement;
 using UnityEngine;
 
@@ -12,6 +13,7 @@ public class PropGenerator : MonoBehaviour
     private float _spawnTime;
 
     [SerializeField] private SpawnState _currentState;
+    public SpawnState CurrentState => _currentState;
     
     private RandomSetManager _easyRandomSetManager, _medRandomSetManager, _hardRandomSetManager;
     private RandomSetManager _currentSetManager;
@@ -59,6 +61,9 @@ public class PropGenerator : MonoBehaviour
 
     private void Update()
     {
+        //dont update if game is stopped
+        if (!GameManager.isPlaying) return;
+        
         _globalTime += GameManager.LevelTime;
 
 
@@ -80,11 +85,11 @@ public class PropGenerator : MonoBehaviour
                 break;
             case SpawnState.RandomMed:
                 _isRandom = true;
-                _currentSetManager = _easyRandomSetManager;
+                _currentSetManager = _medRandomSetManager;
                 break;
             case SpawnState.RandomHard:
                 _isRandom = true;
-                _currentSetManager = _easyRandomSetManager;
+                _currentSetManager = _hardRandomSetManager;
                 break;
             default:
                 break;
