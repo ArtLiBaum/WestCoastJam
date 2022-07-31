@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4144805225740026605}
   - component: {fileID: 3438839843410835583}
   - component: {fileID: 360374271}
+  - component: {fileID: -1034512861596729775}
   m_Layer: 0
   m_Name: SpaceJunk
   m_TagString: Untagged
@@ -111,6 +112,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   baseMoveSpeed: 1
   penalty: 0.2
+  screenShakeDur: 0.2
+  screenShakeIntensity: 0.2
+--- !u!114 &-1034512861596729775
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4144805225740026600}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84034dbf37fc3724c801355ea46a7b60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &9078997448990381137
 GameObject:
   m_ObjectHideFlags: 0
