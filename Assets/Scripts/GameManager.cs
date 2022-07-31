@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -14,6 +15,9 @@ public class GameManager : MonoBehaviour
 
     private float CoasterTimer = 0;
 
+
+    [Header("UI Hookups")] [SerializeField]
+    private GameObject gameOverScreen; 
 
     private GameManager instance;
 
@@ -36,16 +40,26 @@ public class GameManager : MonoBehaviour
 
     private void FixedUpdate()
     {
-        print(LevelSpeed);
+        //print(LevelSpeed);
         LevelSpeed += LevelSpeedDecay * Time.deltaTime;
-        if (LevelSpeed > 0)
+        if (LevelSpeed > -0.01)
         {
+            //Game Over
             LevelSpeed = 0;
+            gameOverScreen.SetActive(true);
+            
         }
 
         if (LevelSpeed <= CoasterSpeedGoal)
         {
             CoasterTimer += Time.deltaTime;
         }
+    }
+
+    public void RestartLevel()
+    {
+        LevelSpeed = -1f;
+        gameOverScreen.SetActive(false);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }
