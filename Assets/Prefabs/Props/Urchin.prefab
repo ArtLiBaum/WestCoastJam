@@ -85,6 +85,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   baseMoveSpeed: 1
   penalty: 0.2
+  screenShakeDur: 0.2
+  screenShakeIntensity: 0.2
 --- !u!58 &6567955111848441133
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -111,6 +113,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4144805227646615038}
   - component: {fileID: 4144805227646615037}
+  - component: {fileID: 2064228921292203495}
   m_Layer: 0
   m_Name: ObstacleSprite
   m_TagString: Untagged
@@ -185,3 +188,23 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &2064228921292203495
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4144805227646615039}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b7e2436ad63ef7e4b9fda2e5e87cf5b7, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
