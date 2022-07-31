@@ -31,7 +31,7 @@ public class CameraController : MonoBehaviour
     {
         if (intensity >= curShakeIntensity || curShakeDuration <= 0)
         {
-            curShakeDuration = duration;
+            curShakeDuration = duration * shakeDuration;
             curShakeIntensity = intensity;
         }
     }
