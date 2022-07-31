@@ -182,5 +182,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6db41db0979fe4458db8c6cf11af66a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scrollSpeed: -10
   bgWidth: 0
+  modifier: 2

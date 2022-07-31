@@ -12,6 +12,7 @@ public class PropGenerator : MonoBehaviour
     private float _spawnTime;
 
     [SerializeField] private SpawnState _currentState;
+    public SpawnState CurrentState => _currentState;
     
     private RandomSetManager _easyRandomSetManager, _medRandomSetManager, _hardRandomSetManager;
     private RandomSetManager _currentSetManager;
