@@ -13,6 +13,6 @@ public class PlayerColor : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        GetComponent<SpriteRenderer>().color = new Color(1, 1 * (1 - GameManager.CoasterTimeFraction), 1 * (1 -  GameManager.CoasterTimeFraction));
+        GetComponent<SpriteRenderer>().color = new Color(1, 1, 1 * (1 -  GameManager.CoasterTimeFraction));
     }
 }

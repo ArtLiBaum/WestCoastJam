@@ -184,3 +184,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bgWidth: 0
   modifier: 2
+  sprite: {fileID: 0}
+  childSprite: {fileID: 0}

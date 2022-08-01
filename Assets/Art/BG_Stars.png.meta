@@ -108,9 +108,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 202.5
+        y: 270
         width: 240
-        height: 202.5
+        height: 135
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -129,9 +129,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 240
-        y: 202.5
+        y: 270
         width: 240
-        height: 202.5
+        height: 135
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -150,9 +150,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 0.5
+        y: 135
         width: 240
-        height: 202.5
+        height: 135
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -171,9 +171,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 240
-        y: 0.5
+        y: 135
         width: 240
-        height: 202.5
+        height: 135
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -183,6 +183,48 @@ TextureImporter:
       bones: []
       spriteID: 48f655091fd7b584bbaccbf7367ae3e7
       internalID: 1637061649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BG_Stars_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ae6c8175b96edd4a89f46b5bdbfa58d
+      internalID: -657791081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BG_Stars_5
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 0
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe844929aa7b57b45ad5fd99f7b756cf
+      internalID: -2035421073
       vertices: []
       indices: 
       edges: []
@@ -200,7 +242,9 @@ TextureImporter:
     nameFileIdTable:
       BG_Stars_3: 1637061649
       BG_Stars_2: 328727937
+      BG_Stars_5: -2035421073
       BG_Stars_1: -83129877
+      BG_Stars_4: -657791081
       BG_Stars_0: 1106847110
   spritePackingTag: 
   pSDRemoveMatte: 0

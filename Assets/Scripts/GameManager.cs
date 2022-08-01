@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Random = UnityEngine.Random;
 
 public class GameManager : MonoBehaviour
 {
@@ -21,9 +22,10 @@ public class GameManager : MonoBehaviour
     [SerializeField] private float CoasterSpeedGoal = -4.5f;
     [SerializeField] private float CoasterTimeGoal = 5;
     [SerializeField] private float AscensionTimeGoal = 10;
+    [SerializeField] private float AscensionSpeed = -2;
     private float AscensionTimer = -1;
     private float CoasterTimer = 0;
-
+    
     private PropGenerator _propGenerator;
 
 
@@ -35,8 +37,13 @@ public class GameManager : MonoBehaviour
     [Header("Other Objects")]
     private static GameManager instance;
 
+    [Header("Last-minute hacks")]
+    [SerializeField] private GameObject BG1;
+    [SerializeField] private GameObject BG2;
+    [SerializeField] private GameObject BG3;
 
-
+    private static AudioSource _source;
+    
     enum LevelBenchmarks
     {
         EasyLevel = 10,
@@ -54,6 +61,8 @@ public class GameManager : MonoBehaviour
         {
             instance = this;
         }
+
+        _source = GetComponent<AudioSource>();
     }
 
     private void Start()
@@ -65,6 +74,10 @@ public class GameManager : MonoBehaviour
         TotalHits = 0;
         TotalPoints = 0;
         isPlaying = true;
+
+        BG1.active = true;
+        BG2.active = false;
+        BG3.active = false;
     }
 
     public static void AdjustSpeed(float amount, float time)
@@ -121,7 +134,12 @@ public class GameManager : MonoBehaviour
         if (CoasterTimeFraction >= 1)
         {
             IsAscending = true;
-            FlashOfLight.FlashLight();
+            CoasterTimeFraction = 0;
+            if (_propGenerator.CurrentState != PropGenerator.SpawnState.RandomHard)
+            {
+                FlashOfLight.FlashLight();
+            }
+            
             // foreach(var obj in Multitag.FindGameObjectsWithTag("Prop"))
             // {
             //     obj.SetActive(false);
@@ -165,7 +183,7 @@ public class GameManager : MonoBehaviour
         print("" + AscensionTimer + " | " + IsAscending);
         if (IsAscending)
         {
-
+            LevelSpeed = AscensionSpeed;
             stars.SetAlpha(1);
             CoasterTimer = 0;
             AscensionTimer += Time.fixedDeltaTime;
@@ -174,6 +192,20 @@ public class GameManager : MonoBehaviour
                 stars.FadeOut();
                 AscensionTimer = 0;
                 IsAscending = false;
+                switch(_propGenerator.CurrentState)
+                {
+                    case PropGenerator.SpawnState.RandomMed:
+                        BG1.active = false;
+                        BG2.active = true;
+                        BG3.active = false;
+                        break;
+
+                    case PropGenerator.SpawnState.RandomHard:
+                        BG1.active = false;
+                        BG2.active = false;
+                        BG3.active = true;
+                        break;
+                }
                 FlashOfLight.FlashLight();
                 _propGenerator.gameObject.SetActive(true);
             }
@@ -189,5 +221,10 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
+    public static void PlayHitSound(AudioClip clip)
+    {
+        _source.pitch = Random.Range(0.9f, 1.1f);
+        _source.PlayOneShot(clip);
+    }
 
 }
