@@ -114,6 +114,7 @@ MonoBehaviour:
   baseMoveSpeed: 1
   boostStrength: 0.5
   burstEffect: {fileID: 6757718003336267096, guid: 623947661705d89418f771ef8162b519, type: 3}
+  speedRampTime: 1
 --- !u!114 &1060898245032485356
 MonoBehaviour:
   m_ObjectHideFlags: 0
