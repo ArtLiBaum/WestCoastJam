@@ -1084,7 +1084,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: asention achieved
+  m_text: ascension achieved
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 02595d3b9511a6d41a3a985c77aa9df6, type: 2}
   m_sharedMaterial: {fileID: -5837509753116868804, guid: 02595d3b9511a6d41a3a985c77aa9df6, type: 2}

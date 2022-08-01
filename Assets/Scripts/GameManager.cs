@@ -27,7 +27,7 @@ public class GameManager : MonoBehaviour
     private float CoasterTimer = 0;
     
     private PropGenerator _propGenerator;
-
+    private AudioClip _asenscionNoise;
 
     [Header("UI Hookups")]
     [SerializeField] private GameObject gameOverScreen;
@@ -63,6 +63,7 @@ public class GameManager : MonoBehaviour
         }
 
         _source = GetComponent<AudioSource>();
+        _asenscionNoise = Resources.Load("SFX/assention") as AudioClip;
     }
 
     private void Start()
@@ -187,6 +188,9 @@ public class GameManager : MonoBehaviour
             stars.SetAlpha(1);
             CoasterTimer = 0;
             AscensionTimer += Time.fixedDeltaTime;
+            if(!_source.isPlaying)
+                PlayHitSound(_asenscionNoise);
+            
             if (AscensionTimer >= AscensionTimeGoal)
             {
                 stars.FadeOut();
