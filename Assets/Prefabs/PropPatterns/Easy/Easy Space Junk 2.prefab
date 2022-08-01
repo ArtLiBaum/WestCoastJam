@@ -572,6 +572,7 @@ MonoBehaviour:
   penalty: 0.2
   screenShakeDur: 0.2
   screenShakeIntensity: 0.2
+  hitSound: {fileID: 0}
 --- !u!1 &3522615505663916897
 GameObject:
   m_ObjectHideFlags: 0
@@ -1149,6 +1150,7 @@ MonoBehaviour:
   penalty: 0.2
   screenShakeDur: 0.2
   screenShakeIntensity: 0.2
+  hitSound: {fileID: 0}
 --- !u!1 &8420561752752058235
 GameObject:
   m_ObjectHideFlags: 0

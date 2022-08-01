@@ -348,6 +348,7 @@ MonoBehaviour:
   penalty: 0.2
   screenShakeDur: 0.2
   screenShakeIntensity: 0.2
+  hitSound: {fileID: 0}
 --- !u!1 &931841317527150947
 GameObject:
   m_ObjectHideFlags: 0
@@ -841,6 +842,7 @@ MonoBehaviour:
   penalty: 0.2
   screenShakeDur: 0.2
   screenShakeIntensity: 0.2
+  hitSound: {fileID: 0}
 --- !u!1 &3048729346609565133
 GameObject:
   m_ObjectHideFlags: 0
@@ -1356,6 +1358,7 @@ MonoBehaviour:
   penalty: 0.2
   screenShakeDur: 0.2
   screenShakeIntensity: 0.2
+  hitSound: {fileID: 0}
 --- !u!1 &6169725473864620809
 GameObject:
   m_ObjectHideFlags: 0
@@ -1477,7 +1480,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6222941565145166696}
   m_LocalRotation: {x: -0, y: -0, z: -0.59104884, w: 0.8066358}
-  m_LocalPosition: {x: 4, y: -14.3, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1882,6 +1885,7 @@ MonoBehaviour:
   penalty: 0.2
   screenShakeDur: 0.2
   screenShakeIntensity: 0.2
+  hitSound: {fileID: 0}
 --- !u!1 &7903548563259977499
 GameObject:
   m_ObjectHideFlags: 0
@@ -2092,6 +2096,7 @@ MonoBehaviour:
   penalty: 0.2
   screenShakeDur: 0.2
   screenShakeIntensity: 0.2
+  hitSound: {fileID: 0}
 --- !u!1 &8313111445517427363
 GameObject:
   m_ObjectHideFlags: 0

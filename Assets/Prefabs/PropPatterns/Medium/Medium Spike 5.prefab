@@ -87,6 +87,7 @@ MonoBehaviour:
   penalty: 0.2
   screenShakeDur: 0.2
   screenShakeIntensity: 0.2
+  hitSound: {fileID: 0}
 --- !u!60 &7145798681047128331
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -307,6 +308,7 @@ MonoBehaviour:
   penalty: 0.2
   screenShakeDur: 0.2
   screenShakeIntensity: 0.2
+  hitSound: {fileID: 0}
 --- !u!58 &4846243305897947959
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -959,7 +961,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8719922824551794654}
   m_LocalRotation: {x: -0, y: -0, z: 0.9999355, w: -0.01136101}
-  m_LocalPosition: {x: 3.2666998, y: -15.413378, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1057,6 +1059,7 @@ MonoBehaviour:
   penalty: 0.2
   screenShakeDur: 0.2
   screenShakeIntensity: 0.2
+  hitSound: {fileID: 0}
 --- !u!58 &7132635918686490733
 CircleCollider2D:
   m_ObjectHideFlags: 0
