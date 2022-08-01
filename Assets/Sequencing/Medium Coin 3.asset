@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a1ed2fa64fe8a6c46b5d3fca62a3ba01, type: 3}
-  m_Name: Easy Coin 1
+  m_Name: Medium Coin 3
   m_EditorClassIdentifier: 
-  Prefab: {fileID: 8284019411912331562, guid: 651981ce1e2ec7349bd29d4ce9518974, type: 3}
+  Prefab: {fileID: 2717992699189531992, guid: d11a35f1550015649a5ebffe0732ff90, type: 3}
   SpawnDelay: 5
   Weight: 40

@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a1ed2fa64fe8a6c46b5d3fca62a3ba01, type: 3}
-  m_Name: ObstacleWall0
+  m_Name: Medium Urchin 9
   m_EditorClassIdentifier: 
-  Prefab: {fileID: 2005420142841092361, guid: 61daee283f42b104eb7cdc3d5d7245cf, type: 3}
+  Prefab: {fileID: 2293627977897510259, guid: 7d3d689bc0cf4af438bb2e172b80bad8, type: 3}
   SpawnDelay: 5
   Weight: 26
