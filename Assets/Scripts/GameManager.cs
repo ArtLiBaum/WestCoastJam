@@ -21,9 +21,10 @@ public class GameManager : MonoBehaviour
     [SerializeField] private float CoasterSpeedGoal = -4.5f;
     [SerializeField] private float CoasterTimeGoal = 5;
     [SerializeField] private float AscensionTimeGoal = 10;
+    [SerializeField] private float AscensionSpeed = -2;
     private float AscensionTimer = -1;
     private float CoasterTimer = 0;
-
+    
     private PropGenerator _propGenerator;
 
 
@@ -121,6 +122,7 @@ public class GameManager : MonoBehaviour
         if (CoasterTimeFraction >= 1)
         {
             IsAscending = true;
+            CoasterTimeFraction = 0;
             FlashOfLight.FlashLight();
             // foreach(var obj in Multitag.FindGameObjectsWithTag("Prop"))
             // {
@@ -165,7 +167,7 @@ public class GameManager : MonoBehaviour
         print("" + AscensionTimer + " | " + IsAscending);
         if (IsAscending)
         {
-
+            LevelSpeed = AscensionSpeed;
             stars.SetAlpha(1);
             CoasterTimer = 0;
             AscensionTimer += Time.fixedDeltaTime;
