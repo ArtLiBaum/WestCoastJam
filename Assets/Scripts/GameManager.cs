@@ -37,6 +37,10 @@ public class GameManager : MonoBehaviour
     [Header("Other Objects")]
     private static GameManager instance;
 
+    [Header("Last-minute hacks")]
+    [SerializeField] private GameObject BG1;
+    [SerializeField] private GameObject BG2;
+    [SerializeField] private GameObject BG3;
 
     private static AudioSource _source;
     
@@ -70,6 +74,10 @@ public class GameManager : MonoBehaviour
         TotalHits = 0;
         TotalPoints = 0;
         isPlaying = true;
+
+        BG1.active = true;
+        BG2.active = false;
+        BG3.active = false;
     }
 
     public static void AdjustSpeed(float amount, float time)
@@ -127,7 +135,11 @@ public class GameManager : MonoBehaviour
         {
             IsAscending = true;
             CoasterTimeFraction = 0;
-            FlashOfLight.FlashLight();
+            if (_propGenerator.CurrentState != PropGenerator.SpawnState.RandomHard)
+            {
+                FlashOfLight.FlashLight();
+            }
+            
             // foreach(var obj in Multitag.FindGameObjectsWithTag("Prop"))
             // {
             //     obj.SetActive(false);
@@ -180,6 +192,20 @@ public class GameManager : MonoBehaviour
                 stars.FadeOut();
                 AscensionTimer = 0;
                 IsAscending = false;
+                switch(_propGenerator.CurrentState)
+                {
+                    case PropGenerator.SpawnState.RandomMed:
+                        BG1.active = false;
+                        BG2.active = true;
+                        BG3.active = false;
+                        break;
+
+                    case PropGenerator.SpawnState.RandomHard:
+                        BG1.active = false;
+                        BG2.active = false;
+                        BG3.active = true;
+                        break;
+                }
                 FlashOfLight.FlashLight();
                 _propGenerator.gameObject.SetActive(true);
             }
