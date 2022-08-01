@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Medium Coin 3
   m_EditorClassIdentifier: 
   Prefab: {fileID: 2717992699189531992, guid: d11a35f1550015649a5ebffe0732ff90, type: 3}
-  SpawnDelay: 5
-  Weight: 40
+  SpawnDelay: 10
+  Weight: 15

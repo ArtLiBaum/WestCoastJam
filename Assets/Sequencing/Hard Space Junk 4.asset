@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Hard Space Junk 4
   m_EditorClassIdentifier: 
   Prefab: {fileID: 8756075239776808199, guid: b490f0d2764b8c34dbfb489184c3cc4c, type: 3}
-  SpawnDelay: 5
-  Weight: 26
+  SpawnDelay: 15
+  Weight: 17

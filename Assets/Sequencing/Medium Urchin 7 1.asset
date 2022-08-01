@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1ed2fa64fe8a6c46b5d3fca62a3ba01, type: 3}
   m_Name: Medium Urchin 7 1
   m_EditorClassIdentifier: 
-  Prefab: {fileID: 4082536327631223324, guid: 55fb32c62adf3aa4da533833a2996c0e, type: 3}
-  SpawnDelay: 5
-  Weight: 26
+  Prefab: {fileID: 4432670986574463814, guid: dd89fcc0b8ea32f4095cd688b2d41c02, type: 3}
+  SpawnDelay: 10
+  Weight: 18

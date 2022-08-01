@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Easy Spike 5
   m_EditorClassIdentifier: 
   Prefab: {fileID: 5175581373867683170, guid: 4b78cfd4f34a0944aa882bc8414c560c, type: 3}
-  SpawnDelay: 5
-  Weight: 26
+  SpawnDelay: 7
+  Weight: 20

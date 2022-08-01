@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Medium Space Junk 2
   m_EditorClassIdentifier: 
   Prefab: {fileID: 7701852179585574981, guid: 26c9660dbccb6734580505ad32b4c69e, type: 3}
-  SpawnDelay: 5
+  SpawnDelay: 10
   Weight: 26

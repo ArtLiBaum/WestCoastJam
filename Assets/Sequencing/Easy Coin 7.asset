@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Easy Coin 7
   m_EditorClassIdentifier: 
   Prefab: {fileID: 6349285188082311655, guid: 115963db0421d554b8536c6c97b98514, type: 3}
-  SpawnDelay: 5
-  Weight: 40
+  SpawnDelay: 7
+  Weight: 15

@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Easy Urchin 2
   m_EditorClassIdentifier: 
   Prefab: {fileID: 2092241117790226402, guid: 4750516e04127624cafd2cbf4542efb9, type: 3}
-  SpawnDelay: 5
+  SpawnDelay: 7
   Weight: 26

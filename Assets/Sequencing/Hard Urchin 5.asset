@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Hard Urchin 5
   m_EditorClassIdentifier: 
   Prefab: {fileID: 6401627599759406184, guid: 7637900dc5f6e684e90b74345cf61bd7, type: 3}
-  SpawnDelay: 5
-  Weight: 26
+  SpawnDelay: 15
+  Weight: 19

@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Medium Urchin 2
   m_EditorClassIdentifier: 
   Prefab: {fileID: 1548162075252469903, guid: d260ed68c1d3efe49af2cc678f31317e, type: 3}
-  SpawnDelay: 5
+  SpawnDelay: 10
   Weight: 26

@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Hard Spike 7
   m_EditorClassIdentifier: 
   Prefab: {fileID: 3470749245338154750, guid: 1eb263bea93bec34a9f1fb8905a9e4f3, type: 3}
-  SpawnDelay: 5
-  Weight: 26
+  SpawnDelay: 15
+  Weight: 20

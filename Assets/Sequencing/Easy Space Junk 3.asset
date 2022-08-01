@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Easy Space Junk 3
   m_EditorClassIdentifier: 
   Prefab: {fileID: 2847685482851112513, guid: 948542e49645b744ca0f0f9627c6e19c, type: 3}
-  SpawnDelay: 5
-  Weight: 26
+  SpawnDelay: 7
+  Weight: 20
