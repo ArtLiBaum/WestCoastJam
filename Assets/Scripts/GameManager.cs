@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Random = UnityEngine.Random;
 
 public class GameManager : MonoBehaviour
 {
@@ -36,7 +37,8 @@ public class GameManager : MonoBehaviour
     private static GameManager instance;
 
 
-
+    private static AudioSource _source;
+    
     enum LevelBenchmarks
     {
         EasyLevel = 10,
@@ -54,6 +56,8 @@ public class GameManager : MonoBehaviour
         {
             instance = this;
         }
+
+        _source = GetComponent<AudioSource>();
     }
 
     private void Start()
@@ -189,5 +193,10 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
+    public static void PlayHitSound(AudioClip clip)
+    {
+        _source.pitch = Random.Range(0.9f, 1.1f);
+        _source.PlayOneShot(clip);
+    }
 
 }
